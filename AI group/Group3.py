@@ -1,7 +1,7 @@
 import re
 print("Enter 1 for English")
 print("Enter 2 for Amharic")
-print("Enter 3 to exit")
+print("Enter 3 to Exit")
 choice=int(input())
 match choice:
    case 1:
@@ -52,9 +52,9 @@ match choice:
             number_words+=len(word_list)
          stringn=re.sub('[^a-zA-Z0-9]','',stringc)
          number_char+=len(stringn)
-         print("Total number of lines is=",number_lines)
-         print("Total number of words is=",number_words)
-         print("Total number of characters is=",number_char)
+         print("Total number of lines is = ",number_lines)
+         print("Total number of words is = ",number_words)
+         print("Total number of characters is = ",number_char)
          file3.close()
       stat_info()
       
@@ -114,7 +114,7 @@ match choice:
    case 3:   
       exit(0)
    case _:
-      print("Invalid key please try Again")
+      print("Invalid key, Please try Again.")
       
 
    
