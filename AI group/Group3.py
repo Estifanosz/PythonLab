@@ -90,8 +90,8 @@ match choice:
          for key in sorted_dic:
             if i<=5:
                print("  ",key,"---------------->",sorted_dic[key])  
-            i=i+1  
-      charfreq()    
+            i=i+1
+      charfreq()          
       def stat_info():
          file3=open("Group3Amharic.txt","r",encoding="UTF-8")
          stringc=file3.read()
@@ -114,7 +114,7 @@ match choice:
    case 3:   
       exit(0)
    case _:
-      print("Invalid key, Please try Again.")
+      print("Invalid key, Please try Again!")
       
 
    
