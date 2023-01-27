@@ -91,3 +91,31 @@ match choice:
             print("Top five frequently occuring characters")
             print("Characters", "           ", "Frequency")
             i = 1    
+            for key in sorted_dic:
+            if i<=5:
+               print("  ",key,"---------------->",sorted_dic[key])  
+            i=i+1
+      charfreq()
+      def stat_info():
+         file3=open("Group3Amharic.txt","r",encoding="UTF-8")
+         stringc=file3.read()
+         number_char=0
+         number_lines=0
+         number_words=0
+         file3.seek(0)
+         for line in file3:
+            word_list=line.split()
+            number_lines+=1
+            number_words+=len(word_list)
+         stringn=re.sub('[^\u1200-\u137F]','',stringc)
+         number_char+=len(stringn)
+         print("Total number of Lines =",number_lines)
+         print("Total number of Words =",number_words)
+         print("Total number of characters =",number_char)
+         file3.close()
+      stat_info()
+      
+   case 3:   
+      exit(0)
+   case _:
+      print("Invalid key, Please try Again!")
