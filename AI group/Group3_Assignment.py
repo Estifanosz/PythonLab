@@ -60,3 +60,34 @@ match choice:
             print("Total number of characters is = ", number_char)
             file3.close()
         stat_info()
+    case 2:
+        afile = open("Group3Amharic.txt", "r", encoding="UTF-8")
+        Amharic_String = afile.read()
+        newA_string = re.sub('[^\u1200-\u137F\n\\s]', '', Amharic_String)
+        afile.close()
+        file1 = open("Group3Amharic.txt", "w", encoding="UTF-8")
+        file1.write(newA_string)
+        file1.close()
+
+        def charfreq():
+            dic = {}
+            file2 = open("Group3Amharic.txt", "r", encoding="UTF-8")
+            string1 = file2.read()
+
+            for ch in string1:
+                if ch.isspace() or (not (0x1200 <= ord(ch) <= 0x137F)):
+                    continue
+                if ch in dic:
+                    dic[ch] = dic[ch]+1
+                else:
+                    dic[ch] = 1
+            sorted_chars = sorted(
+                dic.items(), key=lambda x: x[1], reverse=True)
+            sorted_dic = dict(sorted_chars)
+            print("characters", "           ", "Frequency")
+            for key in sorted_dic:
+                print("  ", key, "---------------->", sorted_dic[key])
+            print()
+            print("Top five frequently occuring characters")
+            print("Characters", "           ", "Frequency")
+            i = 1    
