@@ -1,5 +1,5 @@
 import  re
-print("Enter 1 for English")
+print("Enter 1 for English is")
 print("Enter 2 for Amharic")
 print("Enter 3 to Exit")
 choice = int(input())
