@@ -21,7 +21,7 @@ def play_rps():
         result = "computer"
 
     # Print result
-    print("You chose {} and the computer chose {}. The result is {}.".format(user_choice, computer_choice, result))
+    print("You chose {} and the computer chose {}. The result is a {}.".format(user_choice, computer_choice, result))
     return result
   except ValueError as ve:
     print(ve)
